@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naya", "Naya\Naya.csproj", "{09BF5200-307B-4989-8879-A0F9F96519C6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{98887D28-E480-4401-A700-405B6EA7EFCC} = {98887D28-E480-4401-A700-405B6EA7EFCC}
+		{D1E98C30-E576-469D-A326-13E5BCA0C14D} = {D1E98C30-E576-469D-A326-13E5BCA0C14D}
+		{F199C95A-C1D1-4997-AE3B-8DB4CC46B617} = {F199C95A-C1D1-4997-AE3B-8DB4CC46B617}
+		{CCF82080-8B19-46FA-A4BE-964F173B2CDB} = {CCF82080-8B19-46FA-A4BE-964F173B2CDB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kiso", "..\..\Libraries\KisoNET\Kiso.csproj", "{D1E98C30-E576-469D-A326-13E5BCA0C14D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodai", "..\..\Libraries\DodaiNET\Dodai.csproj", "{CCF82080-8B19-46FA-A4BE-964F173B2CDB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D1E98C30-E576-469D-A326-13E5BCA0C14D} = {D1E98C30-E576-469D-A326-13E5BCA0C14D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodai.AvalonDock", "..\..\Libraries\Dodai.AvalonDock\Dodai.AvalonDock.csproj", "{72B80B24-0A02-4147-BB28-2FC6C8223EEC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CCF82080-8B19-46FA-A4BE-964F173B2CDB} = {CCF82080-8B19-46FA-A4BE-964F173B2CDB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dodai.Python", "..\..\Libraries\Dodai.Python\Dodai.Python.csproj", "{9A09F9DE-4653-4A7A-A304-B9282D1CED17}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CCF82080-8B19-46FA-A4BE-964F173B2CDB} = {CCF82080-8B19-46FA-A4BE-964F173B2CDB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naya.Foundation", "Naya.Foundation\Naya.Foundation.csproj", "{8010576F-ECD0-45E5-BD73-B4D7263B1440}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{F4755607-4918-415A-BEF0-43388FADE1E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naya.Foundation.Plugin", "Plugins\Naya.Foundation.Plugin\Naya.Foundation.Plugin.csproj", "{98887D28-E480-4401-A700-405B6EA7EFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Naya.Graphics.Plugin", "Plugins\Naya.Graphics.Plugin\Naya.Graphics.Plugin.csproj", "{F199C95A-C1D1-4997-AE3B-8DB4CC46B617}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09BF5200-307B-4989-8879-A0F9F96519C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09BF5200-307B-4989-8879-A0F9F96519C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09BF5200-307B-4989-8879-A0F9F96519C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09BF5200-307B-4989-8879-A0F9F96519C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1E98C30-E576-469D-A326-13E5BCA0C14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1E98C30-E576-469D-A326-13E5BCA0C14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E98C30-E576-469D-A326-13E5BCA0C14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1E98C30-E576-469D-A326-13E5BCA0C14D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCF82080-8B19-46FA-A4BE-964F173B2CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF82080-8B19-46FA-A4BE-964F173B2CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF82080-8B19-46FA-A4BE-964F173B2CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF82080-8B19-46FA-A4BE-964F173B2CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72B80B24-0A02-4147-BB28-2FC6C8223EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72B80B24-0A02-4147-BB28-2FC6C8223EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72B80B24-0A02-4147-BB28-2FC6C8223EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72B80B24-0A02-4147-BB28-2FC6C8223EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A09F9DE-4653-4A7A-A304-B9282D1CED17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A09F9DE-4653-4A7A-A304-B9282D1CED17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A09F9DE-4653-4A7A-A304-B9282D1CED17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A09F9DE-4653-4A7A-A304-B9282D1CED17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8010576F-ECD0-45E5-BD73-B4D7263B1440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8010576F-ECD0-45E5-BD73-B4D7263B1440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8010576F-ECD0-45E5-BD73-B4D7263B1440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8010576F-ECD0-45E5-BD73-B4D7263B1440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98887D28-E480-4401-A700-405B6EA7EFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98887D28-E480-4401-A700-405B6EA7EFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98887D28-E480-4401-A700-405B6EA7EFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98887D28-E480-4401-A700-405B6EA7EFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F199C95A-C1D1-4997-AE3B-8DB4CC46B617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F199C95A-C1D1-4997-AE3B-8DB4CC46B617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F199C95A-C1D1-4997-AE3B-8DB4CC46B617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F199C95A-C1D1-4997-AE3B-8DB4CC46B617}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{98887D28-E480-4401-A700-405B6EA7EFCC} = {F4755607-4918-415A-BEF0-43388FADE1E8}
+		{F199C95A-C1D1-4997-AE3B-8DB4CC46B617} = {F4755607-4918-415A-BEF0-43388FADE1E8}
+	EndGlobalSection
+EndGlobal

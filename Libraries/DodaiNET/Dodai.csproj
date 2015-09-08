@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCF82080-8B19-46FA-A4BE-964F173B2CDB}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dodai</RootNamespace>
+    <AssemblyName>Dodai</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bridges\IScriptPresenter.cs" />
+    <Compile Include="Bridges\Script.cs" />
+    <Compile Include="Bridges\ScriptBridge.cs" />
+    <Compile Include="Bridges\ScriptPresenter.cs" />
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\ViewReceiverCommand.cs" />
+    <Compile Include="ComponentModel\DisposableNotifiableObject.cs" />
+    <Compile Include="ComponentModel\DisposableObject.cs" />
+    <Compile Include="ComponentModel\NotifiableObject.cs" />
+    <Compile Include="ComponentModel\SynchronizedObject.cs" />
+    <Compile Include="Events\IWeakEventHandler.cs" />
+    <Compile Include="Events\WeakEventHandler.cs" />
+    <Compile Include="GlobalPresenter.cs" />
+    <Compile Include="Helpers\DispatcherHelper.cs" />
+    <Compile Include="Helpers\EventHandlerHelper.cs" />
+    <Compile Include="Logs\ConsoleLogFactory.cs" />
+    <Compile Include="Logs\ILogPresenter.cs" />
+    <Compile Include="Logs\LogFactory.cs" />
+    <Compile Include="Logs\Logger.cs" />
+    <Compile Include="Logs\LogPresenter.cs" />
+    <Compile Include="Logs\NullLogFactory.cs" />
+    <Compile Include="Menus\IMenuPresenter.cs" />
+    <Compile Include="Menus\Menu.cs" />
+    <Compile Include="Menus\MenuPresenter.cs" />
+    <Compile Include="Modules\Output\OutputLogFactory.cs" />
+    <Compile Include="Modules\Output\OutputView.xaml.cs">
+      <DependentUpon>OutputView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Output\OutputViewModel.cs" />
+    <Compile Include="Modules\ScriptEditor\ScriptEditorView.xaml.cs">
+      <DependentUpon>ScriptEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\ScriptEditor\ScriptEditorViewModel.cs" />
+    <Compile Include="Operations\Applications\RedoOperation.cs" />
+    <Compile Include="Operations\Applications\UndoOperation.cs" />
+    <Compile Include="Operations\IOperationPresenter.cs" />
+    <Compile Include="Operations\Operation.cs" />
+    <Compile Include="Operations\OperationGroup.cs" />
+    <Compile Include="Operations\OperationPresenter.cs" />
+    <Compile Include="Operations\OperationTransaction.cs" />
+    <Compile Include="Operations\PropertyOperation.cs" />
+    <Compile Include="Panels\IPanelPresenter.cs" />
+    <Compile Include="Panels\PanelPresenter.cs" />
+    <Compile Include="Plugins\Applications\DefaultPluginUnit.cs" />
+    <Compile Include="Plugins\Applications\OutputToolFactory.cs" />
+    <Compile Include="Plugins\Applications\RedoOperationFactory.cs" />
+    <Compile Include="Plugins\Applications\ScriptEditorToolFactory.cs" />
+    <Compile Include="Plugins\Applications\UndoOperationFactory.cs" />
+    <Compile Include="Plugins\FactoryCache.cs" />
+    <Compile Include="Plugins\Generic\PluginDialogFactory.cs" />
+    <Compile Include="Plugins\IPluginPresenter.cs" />
+    <Compile Include="Plugins\OperationFactoryCache.cs" />
+    <Compile Include="Plugins\PluginDialogArgs.cs" />
+    <Compile Include="Plugins\PluginDialogFactory.cs" />
+    <Compile Include="Plugins\PluginDocumentFactory.cs" />
+    <Compile Include="Plugins\PluginFactory.cs" />
+    <Compile Include="Plugins\PluginImporter.cs" />
+    <Compile Include="Plugins\PluginMenuFactory.cs" />
+    <Compile Include="Plugins\PluginOperationFactory.cs" />
+    <Compile Include="Plugins\PluginPresenter.cs" />
+    <Compile Include="Plugins\PluginToolFactory.cs" />
+    <Compile Include="Plugins\PluginUnit.cs" />
+    <Compile Include="Plugins\ToolFactoryCache.cs" />
+    <Compile Include="Repositories\IRepositoryPresenter.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\RepositoryChangedEventArgs.cs" />
+    <Compile Include="Repositories\RepositoryPresenter.cs" />
+    <Compile Include="Services\ActiveChangedEventArgs.cs" />
+    <Compile Include="Services\ActiveDocumentChangedEventArgs.cs" />
+    <Compile Include="Services\DocumentClosedEventArgs.cs" />
+    <Compile Include="Services\IDocumentable.cs" />
+    <Compile Include="Services\IPanelable.cs" />
+    <Compile Include="Services\IPresenter.cs" />
+    <Compile Include="Services\IToolable.cs" />
+    <Compile Include="Services\PanelLocation.cs" />
+    <Compile Include="Services\Presenter.cs" />
+    <Compile Include="ViewModels\DocumentViewModel.cs" />
+    <Compile Include="ViewModels\PanelViewModel.cs" />
+    <Compile Include="ViewModels\ToolViewModel.cs" />
+    <Compile Include="ViewModels\ViewModel.cs" />
+    <Compile Include="ViewModels\WorkspaceViewModel.cs" />
+    <Compile Include="Windows\Controls\PanelStyleSelector.cs" />
+    <Compile Include="Windows\Data\ActiveDocumentConverter.cs" />
+    <Page Include="Modules\Output\OutputView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Modules\ScriptEditor\ScriptEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Logs\Log.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
