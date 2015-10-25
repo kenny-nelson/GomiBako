@@ -10,6 +10,8 @@
 		DF96E9881BD3D3A8005717FF /* kisoExportCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = DF96E9861BD3D3A8005717FF /* kisoExportCmd.h */; };
 		DF96E9891BD3D3A8005717FF /* pluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF96E9871BD3D3A8005717FF /* pluginMain.cpp */; };
 		DF96E98B1BD3D3C2005717FF /* kisoExportCmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF96E98A1BD3D3C2005717FF /* kisoExportCmd.cpp */; };
+		DFBEB26F1BDCFA22006F8B28 /* kisoJointXAxisCmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFBEB26D1BDCFA22006F8B28 /* kisoJointXAxisCmd.cpp */; };
+		DFBEB2701BDCFA22006F8B28 /* kisoJointXAxisCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = DFBEB26E1BDCFA22006F8B28 /* kisoJointXAxisCmd.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		DF96E9861BD3D3A8005717FF /* kisoExportCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kisoExportCmd.h; path = src/kisoExportCmd.h; sourceTree = "<group>"; };
 		DF96E9871BD3D3A8005717FF /* pluginMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pluginMain.cpp; path = src/pluginMain.cpp; sourceTree = "<group>"; };
 		DF96E98A1BD3D3C2005717FF /* kisoExportCmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = kisoExportCmd.cpp; path = src/kisoExportCmd.cpp; sourceTree = "<group>"; };
+		DFBEB26D1BDCFA22006F8B28 /* kisoJointXAxisCmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = kisoJointXAxisCmd.cpp; path = src/kisoJointXAxisCmd.cpp; sourceTree = "<group>"; };
+		DFBEB26E1BDCFA22006F8B28 /* kisoJointXAxisCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kisoJointXAxisCmd.h; path = src/kisoJointXAxisCmd.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,8 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DFBEB26D1BDCFA22006F8B28 /* kisoJointXAxisCmd.cpp */,
+				DFBEB26E1BDCFA22006F8B28 /* kisoJointXAxisCmd.h */,
 				DF96E98A1BD3D3C2005717FF /* kisoExportCmd.cpp */,
 				DF96E9861BD3D3A8005717FF /* kisoExportCmd.h */,
 				DF96E9871BD3D3A8005717FF /* pluginMain.cpp */,
@@ -81,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF96E9881BD3D3A8005717FF /* kisoExportCmd.h in Headers */,
+				DFBEB2701BDCFA22006F8B28 /* kisoJointXAxisCmd.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF96E98B1BD3D3C2005717FF /* kisoExportCmd.cpp in Sources */,
+				DFBEB26F1BDCFA22006F8B28 /* kisoJointXAxisCmd.cpp in Sources */,
 				DF96E9891BD3D3A8005717FF /* pluginMain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +185,14 @@
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
+				OTHER_LDFLAGS = (
+					"-Wl,-executable_path,$(MAYA_DIRECTORY)/Maya.app/Contents/MacOS",
+					"-Wl,-exported_symbol,__Z16initializePlugin7MObject",
+					"-Wl,-exported_symbol,__Z18uninitializePlugin7MObject",
+					"-lOpenMaya",
+					"-lFoundation",
+					"-lOpenMayaAnim",
+				);
 				PREBINDING = NO;
 				PRODUCT_NAME = kisoMayaTools;
 				ZERO_LINK = YES;
@@ -200,6 +216,14 @@
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_bundle;
+				OTHER_LDFLAGS = (
+					"-Wl,-executable_path,$(MAYA_DIRECTORY)/Maya.app/Contents/MacOS",
+					"-Wl,-exported_symbol,__Z16initializePlugin7MObject",
+					"-Wl,-exported_symbol,__Z18uninitializePlugin7MObject",
+					"-lOpenMaya",
+					"-lFoundation",
+					"-lOpenMayaAnim",
+				);
 				PREBINDING = NO;
 				PRODUCT_NAME = kisoMayaTools;
 				ZERO_LINK = NO;

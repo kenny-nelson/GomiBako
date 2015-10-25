@@ -5,19 +5,20 @@
 
 namespace kiso {
 namespace maya {
-class ExportCmd final : public MPxCommand {
+class JointXAxisCmd final : public MPxCommand {
  public:
-    static const std::string kCommandName;
+  static const std::string kCommandName;
   static void* CreateInstance();
   static MSyntax CreateSyntax();
 
-  explicit ExportCmd() {}
-  ~ExportCmd() override {}
+  explicit JointXAxisCmd() {}
+  ~JointXAxisCmd() override {}
 
   bool isUndoable() const override { return false; }
   MStatus doIt(const MArgList& args) override;
 
  private:
+  MStatus ParseArgs(const MArgList& args);
   MSelectionList selections_;
 };
 }
