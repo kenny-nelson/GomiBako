@@ -17,9 +17,9 @@ const char* kFileName = "-f";
 const char* kFileNameLong = "-file";
 }
 
-    const std::string ExportCmd::kCommandName("kisoExportCmd");
+    const std::string ExportCmd::kCommandName("kisoExport");
 
-void* ExportCmd::CreateInstance() { return new ExportCmd; }
+void* ExportCmd::CreateInstance() { return new ExportCmd(); }
 
 MSyntax ExportCmd::CreateSyntax() {
   MSyntax syntax;

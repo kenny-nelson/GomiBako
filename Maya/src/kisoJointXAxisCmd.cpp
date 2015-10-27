@@ -13,9 +13,9 @@
 namespace kiso {
 namespace maya {
 
-const std::string JointXAxisCmd::kCommandName("kisoJointXAxisCmd");
+const std::string JointXAxisCmd::kCommandName("kisoJointXAxis");
 
-void* JointXAxisCmd::CreateInstance() { return new JointXAxisCmd; }
+void* JointXAxisCmd::CreateInstance() { return new JointXAxisCmd(); }
 
 MSyntax JointXAxisCmd::CreateSyntax() {
   MSyntax syntax;
