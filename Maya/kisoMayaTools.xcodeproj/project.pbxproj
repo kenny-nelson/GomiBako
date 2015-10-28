@@ -12,8 +12,8 @@
 		DF96E9881BD3D3A8005717FF /* kisoExportCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = DF96E9861BD3D3A8005717FF /* kisoExportCmd.h */; };
 		DF96E9891BD3D3A8005717FF /* pluginMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF96E9871BD3D3A8005717FF /* pluginMain.cpp */; };
 		DF96E98B1BD3D3C2005717FF /* kisoExportCmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF96E98A1BD3D3C2005717FF /* kisoExportCmd.cpp */; };
-		DFBEB26F1BDCFA22006F8B28 /* kisoJointXAxisCmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFBEB26D1BDCFA22006F8B28 /* kisoJointXAxisCmd.cpp */; };
-		DFBEB2701BDCFA22006F8B28 /* kisoJointXAxisCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = DFBEB26E1BDCFA22006F8B28 /* kisoJointXAxisCmd.h */; };
+		DFBEB26F1BDCFA22006F8B28 /* kisoJointAxisCmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFBEB26D1BDCFA22006F8B28 /* kisoJointAxisCmd.cpp */; };
+		DFBEB2701BDCFA22006F8B28 /* kisoJointAxisCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = DFBEB26E1BDCFA22006F8B28 /* kisoJointAxisCmd.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +23,8 @@
 		DF96E9861BD3D3A8005717FF /* kisoExportCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kisoExportCmd.h; path = src/kisoExportCmd.h; sourceTree = "<group>"; };
 		DF96E9871BD3D3A8005717FF /* pluginMain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pluginMain.cpp; path = src/pluginMain.cpp; sourceTree = "<group>"; };
 		DF96E98A1BD3D3C2005717FF /* kisoExportCmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = kisoExportCmd.cpp; path = src/kisoExportCmd.cpp; sourceTree = "<group>"; };
-		DFBEB26D1BDCFA22006F8B28 /* kisoJointXAxisCmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = kisoJointXAxisCmd.cpp; path = src/kisoJointXAxisCmd.cpp; sourceTree = "<group>"; };
-		DFBEB26E1BDCFA22006F8B28 /* kisoJointXAxisCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kisoJointXAxisCmd.h; path = src/kisoJointXAxisCmd.h; sourceTree = "<group>"; };
+		DFBEB26D1BDCFA22006F8B28 /* kisoJointAxisCmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = kisoJointAxisCmd.cpp; path = src/kisoJointAxisCmd.cpp; sourceTree = "<group>"; };
+		DFBEB26E1BDCFA22006F8B28 /* kisoJointAxisCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kisoJointAxisCmd.h; path = src/kisoJointAxisCmd.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 			children = (
 				DF6C264D1BDFB8FF00794FE4 /* kisoCheckMeshCmd.cpp */,
 				DF6C264E1BDFB8FF00794FE4 /* kisoCheckMeshCmd.h */,
-				DFBEB26D1BDCFA22006F8B28 /* kisoJointXAxisCmd.cpp */,
-				DFBEB26E1BDCFA22006F8B28 /* kisoJointXAxisCmd.h */,
+				DFBEB26D1BDCFA22006F8B28 /* kisoJointAxisCmd.cpp */,
+				DFBEB26E1BDCFA22006F8B28 /* kisoJointAxisCmd.h */,
 				DF96E98A1BD3D3C2005717FF /* kisoExportCmd.cpp */,
 				DF96E9861BD3D3A8005717FF /* kisoExportCmd.h */,
 				DF96E9871BD3D3A8005717FF /* pluginMain.cpp */,
@@ -94,7 +94,7 @@
 			files = (
 				DF96E9881BD3D3A8005717FF /* kisoExportCmd.h in Headers */,
 				DF6C26501BDFB8FF00794FE4 /* kisoCheckMeshCmd.h in Headers */,
-				DFBEB2701BDCFA22006F8B28 /* kisoJointXAxisCmd.h in Headers */,
+				DFBEB2701BDCFA22006F8B28 /* kisoJointAxisCmd.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF96E98B1BD3D3C2005717FF /* kisoExportCmd.cpp in Sources */,
-				DFBEB26F1BDCFA22006F8B28 /* kisoJointXAxisCmd.cpp in Sources */,
+				DFBEB26F1BDCFA22006F8B28 /* kisoJointAxisCmd.cpp in Sources */,
 				DF96E9891BD3D3A8005717FF /* pluginMain.cpp in Sources */,
 				DF6C264F1BDFB8FF00794FE4 /* kisoCheckMeshCmd.cpp in Sources */,
 			);
