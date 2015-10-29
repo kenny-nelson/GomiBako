@@ -1,6 +1,7 @@
 #include "kisoExportCmd.h"
 #include "kisoJointAxisCmd.h"
 #include "kisoCheckMeshCmd.h"
+#include "kisoJointVectorCmd.h"
 #include <maya/MFnPlugin.h>
 
 MStatus initializePlugin(MObject obj) {
@@ -39,6 +40,17 @@ MStatus initializePlugin(MObject obj) {
     }
   }
 
+  {
+    status =
+        plugin.registerCommand(kiso::maya::JointVectorCmd::kCommandName.c_str(),
+                               kiso::maya::JointVectorCmd::CreateInstance,
+                               kiso::maya::JointVectorCmd::CreateSyntax);
+    if (!status) {
+      status.perror("registerCommand");
+      return status;
+    }
+  }
+
   return status;
 }
 
@@ -68,6 +80,16 @@ MStatus uninitializePlugin(MObject obj) {
   {
     status = plugin.deregisterCommand(
         kiso::maya::CheckMeshCmd::kCommandName.c_str());
+
+    if (!status) {
+      status.perror("deregisterCommand");
+      return status;
+    }
+  }
+
+  {
+    status = plugin.deregisterCommand(
+        kiso::maya::JointVectorCmd::kCommandName.c_str());
 
     if (!status) {
       status.perror("deregisterCommand");

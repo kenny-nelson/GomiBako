@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF4BD80D1BE25EAB008DCAEE /* kisoJointVectorCmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF4BD80B1BE25EAB008DCAEE /* kisoJointVectorCmd.cpp */; };
+		DF4BD80E1BE25EAB008DCAEE /* kisoJointVectorCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = DF4BD80C1BE25EAB008DCAEE /* kisoJointVectorCmd.h */; };
 		DF6C264F1BDFB8FF00794FE4 /* kisoCheckMeshCmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C264D1BDFB8FF00794FE4 /* kisoCheckMeshCmd.cpp */; };
 		DF6C26501BDFB8FF00794FE4 /* kisoCheckMeshCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = DF6C264E1BDFB8FF00794FE4 /* kisoCheckMeshCmd.h */; };
 		DF96E9881BD3D3A8005717FF /* kisoExportCmd.h in Headers */ = {isa = PBXBuildFile; fileRef = DF96E9861BD3D3A8005717FF /* kisoExportCmd.h */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		D2AAC0630554660B00DB518D /* kisoMayaTools.bundle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = kisoMayaTools.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF4BD80B1BE25EAB008DCAEE /* kisoJointVectorCmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = kisoJointVectorCmd.cpp; path = src/kisoJointVectorCmd.cpp; sourceTree = "<group>"; };
+		DF4BD80C1BE25EAB008DCAEE /* kisoJointVectorCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kisoJointVectorCmd.h; path = src/kisoJointVectorCmd.h; sourceTree = "<group>"; };
 		DF6C264D1BDFB8FF00794FE4 /* kisoCheckMeshCmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = kisoCheckMeshCmd.cpp; path = src/kisoCheckMeshCmd.cpp; sourceTree = "<group>"; };
 		DF6C264E1BDFB8FF00794FE4 /* kisoCheckMeshCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kisoCheckMeshCmd.h; path = src/kisoCheckMeshCmd.h; sourceTree = "<group>"; };
 		DF96E9861BD3D3A8005717FF /* kisoExportCmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = kisoExportCmd.h; path = src/kisoExportCmd.h; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DF4BD80B1BE25EAB008DCAEE /* kisoJointVectorCmd.cpp */,
+				DF4BD80C1BE25EAB008DCAEE /* kisoJointVectorCmd.h */,
 				DF6C264D1BDFB8FF00794FE4 /* kisoCheckMeshCmd.cpp */,
 				DF6C264E1BDFB8FF00794FE4 /* kisoCheckMeshCmd.h */,
 				DFBEB26D1BDCFA22006F8B28 /* kisoJointAxisCmd.cpp */,
@@ -95,6 +101,7 @@
 				DF96E9881BD3D3A8005717FF /* kisoExportCmd.h in Headers */,
 				DF6C26501BDFB8FF00794FE4 /* kisoCheckMeshCmd.h in Headers */,
 				DFBEB2701BDCFA22006F8B28 /* kisoJointAxisCmd.h in Headers */,
+				DF4BD80E1BE25EAB008DCAEE /* kisoJointVectorCmd.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +174,7 @@
 				DF96E98B1BD3D3C2005717FF /* kisoExportCmd.cpp in Sources */,
 				DFBEB26F1BDCFA22006F8B28 /* kisoJointAxisCmd.cpp in Sources */,
 				DF96E9891BD3D3A8005717FF /* pluginMain.cpp in Sources */,
+				DF4BD80D1BE25EAB008DCAEE /* kisoJointVectorCmd.cpp in Sources */,
 				DF6C264F1BDFB8FF00794FE4 /* kisoCheckMeshCmd.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
