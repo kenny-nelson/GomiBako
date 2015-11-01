@@ -69,8 +69,6 @@ MStatus JointAxisCmd::doIt(const MArgList& args) {
       MTransformationMatrix::RotationOrder rotation_order;
       joint.getRotation(rotation, rotation_order);
 
-      MTransformationMatrix matrix;
-
       matrix.addRotation(orientation, orientation_order, MSpace::kObject);
       matrix.addRotation(rotation, rotation_order, MSpace::kObject);
     }
@@ -79,9 +77,11 @@ MStatus JointAxisCmd::doIt(const MArgList& args) {
     MVector y_axis(0.0, 1.0, 0.0);
     MVector z_axis(0.0, 0.0, 1.0);
 
-    x_axis *= matrix.asMatrix();
-    y_axis *= matrix.asMatrix();
-    z_axis *= matrix.asMatrix();
+    auto matrix_data = matrix.asMatrix();
+
+    x_axis *= matrix_data;
+    y_axis *= matrix_data;
+    z_axis *= matrix_data;
     x_axis.normalize();
     y_axis.normalize();
     z_axis.normalize();
@@ -115,31 +115,34 @@ MStatus JointAxisCmd::doIt(const MArgList& args) {
     }
 
 #if defined(DEBUG)
-    MString message("Joint: ");
-    message += "[";
-    message += x_axis[0];
-    message += ", ";
-    message += x_axis[1];
-    message += ", ";
-    message += x_axis[2];
-    message += "] ";
+    {
+      MString message("Joint: ");
+      message += "[";
+      message += x_axis[0];
+      message += ", ";
+      message += x_axis[1];
+      message += ", ";
+      message += x_axis[2];
+      message += "] ";
 
-    message += "[";
-    message += y_axis[0];
-    message += ", ";
-    message += y_axis[1];
-    message += ", ";
-    message += y_axis[2];
-    message += "] ";
+      message += "[";
+      message += y_axis[0];
+      message += ", ";
+      message += y_axis[1];
+      message += ", ";
+      message += y_axis[2];
+      message += "] ";
 
-    message += "[";
-    message += z_axis[0];
-    message += ", ";
-    message += z_axis[1];
-    message += ", ";
-    message += z_axis[2];
-    message += "] ";
-    message += dag_path.fullPathName();
+      message += "[";
+      message += z_axis[0];
+      message += ", ";
+      message += z_axis[1];
+      message += ", ";
+      message += z_axis[2];
+      message += "] ";
+      message += dag_path.fullPathName();
+      MGlobal::displayInfo(message);
+    }
 #endif
     break;
   }
